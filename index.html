@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phraser Beam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="game">
+    <h1>Phraser Beam</h1>
+    <div id="aliens">
+      <div class="alien" id="alien-left"></div>
+      <div class="alien" id="alien-right"></div>
+    </div>
+    <div id="beam" class="hidden"></div>
+    <div id="phrase"></div>
+    <div id="keyboard"></div>
+    <div id="status">Blasts used: <span id="blasts">0</span></div>
+  </div>
+  <div id="victory" class="hidden">
+    <div class="alien victory"></div>
+    <p id="final-message"></p>
+    <button id="play-again">Play Again</button>
+  </div>
+</body>
+</html>
