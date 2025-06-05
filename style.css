@@ -7,6 +7,7 @@ body {
   padding: 0;
 }
 #game {
+  position: relative;
   padding-top: 20px;
 }
 #phrase {
@@ -18,6 +19,13 @@ body {
   width: 30px;
   height: 40px;
   font-size: 1em;
+}
+#keyboard button.in-phrase {
+  background: #224;
+  color: #fff;
+}
+#keyboard button:disabled {
+  opacity: 0.6;
 }
 #status {
   margin: 15px 0;
@@ -43,9 +51,15 @@ body {
 .alien::before { left: 5px; }
 .alien::after { right: 5px; }
 #aliens {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  pointer-events: none;
+  z-index: -1;
 }
 #alien-left { transform: scaleX(-1); }
 #beam {

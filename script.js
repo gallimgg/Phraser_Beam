@@ -36,6 +36,9 @@ function createKeyboard() {
     const letter = String.fromCharCode(i);
     const btn = document.createElement('button');
     btn.textContent = letter;
+    if (currentPhrase.includes(letter)) {
+      btn.classList.add('in-phrase');
+    }
     btn.addEventListener('click', () => guess(letter, btn));
     kb.appendChild(btn);
   }
