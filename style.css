@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#game {
+  padding-top: 20px;
+}
+#phrase {
+  font-size: 2em;
+  margin: 20px 0;
+}
+#keyboard button {
+  margin: 2px;
+  width: 30px;
+  height: 40px;
+  font-size: 1em;
+}
+#status {
+  margin: 15px 0;
+}
+.alien {
+  width: 60px;
+  height: 60px;
+  background: green;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+.alien::before,
+.alien::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 20px;
+  background: green;
+  top: -20px;
+  border-radius: 50% 50% 0 0;
+}
+.alien::before { left: 5px; }
+.alien::after { right: 5px; }
+#aliens {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#alien-left { transform: scaleX(-1); }
+#beam {
+  width: 10px;
+  height: 5px;
+  background: yellow;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  margin-left: -5px;
+  animation: shoot 0.5s linear forwards;
+}
+.hidden { display: none; }
+@keyframes shoot {
+  from { transform: translateX(0); }
+  to { transform: translateX(300px); }
+}
+#victory {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.alien.victory {
+  width: 80px;
+  height: 80px;
+  background: gold;
+}
