@@ -20,3 +20,16 @@ Then visit `http://localhost:8000`.
 4. When all letters are revealed, a victory screen shows how many blasts you used.
 
 Enjoy the whimsical aliens cheering you on!
+
+## Git Repository
+
+This project is tracked with Git. To work on it locally, clone the repository and
+open the files in your editor:
+
+```bash
+git clone https://github.com/yourusername/Phraser_Beam.git
+cd Phraser_Beam
+```
+
+Once cloned, you can commit your changes and use standard Git commands like
+`git status`, `git add`, and `git commit`.
