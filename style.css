@@ -19,6 +19,13 @@ body {
   height: 40px;
   font-size: 1em;
 }
+#keyboard {
+  position: relative;
+  z-index: 1;
+}
+#keyboard div {
+  margin-bottom: 4px;
+}
 #status {
   margin: 15px 0;
 }
@@ -29,6 +36,7 @@ body {
   border-radius: 50%;
   position: relative;
   display: inline-block;
+  pointer-events: none;
 }
 .alien::before,
 .alien::after {
@@ -46,6 +54,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  pointer-events: none;
+  margin-bottom: 20px;
 }
 #alien-left { transform: scaleX(-1); }
 #beam {
@@ -57,6 +67,7 @@ body {
   left: 50%;
   margin-left: -5px;
   animation: shoot 0.5s linear forwards;
+  pointer-events: none;
 }
 .hidden { display: none; }
 @keyframes shoot {
