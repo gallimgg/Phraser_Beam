@@ -32,13 +32,17 @@ function renderPhrase() {
 function createKeyboard() {
   const kb = document.getElementById('keyboard');
   kb.innerHTML = '';
-  for (let i=65; i<=90; i++) {
-    const letter = String.fromCharCode(i);
-    const btn = document.createElement('button');
-    btn.textContent = letter;
-    btn.addEventListener('click', () => guess(letter, btn));
-    kb.appendChild(btn);
-  }
+  const rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
+  rows.forEach(row => {
+    const rowDiv = document.createElement('div');
+    for (const letter of row) {
+      const btn = document.createElement('button');
+      btn.textContent = letter;
+      btn.addEventListener('click', () => guess(letter, btn));
+      rowDiv.appendChild(btn);
+    }
+    kb.appendChild(rowDiv);
+  });
 }
 
 function updateBlasts() {
